@@ -1,137 +1,212 @@
 {
   "inventory": [
     {
-      "name": "node-0", 
+      "name": "node-0",
       "devices": [
         {
-          "available": true, 
-          "dev_id": "CCC/ccc", 
-          "rotates": false, 
-          "type": "ssd", 
-          "id": "/dev/nvme0n1", 
-          "size": 274877906944
-        }, 
+          "path": "/dev/nvme0n1",
+          "sys_api": {
+            "vendor": "CCC",
+            "model": "ccc",
+            "size": 274877906944,
+            "rotational": "0",
+            "human_readable_size": "256 GB"
+          },
+          "available": true,
+          "rejected_reasons": [],
+          "device_id": "CCC-ccc-node-0-nvme0n1"
+        },
         {
-          "available": false, 
-          "dev_id": "AAA/aaa", 
-          "rotates": true, 
-          "type": "hdd", 
-          "id": "/dev/sda", 
-          "size": 4398046511104
-        }, 
+          "path": "/dev/sda",
+          "sys_api": {
+            "vendor": "AAA",
+            "model": "aaa",
+            "size": 4398046511104,
+            "rotational": "1",
+            "human_readable_size": "4096 GB"
+          },
+          "available": false,
+          "rejected_reasons": [],
+          "device_id": "AAA-aaa-node-0-sda"
+        },
         {
-          "available": true, 
-          "dev_id": "AAA/aaa", 
-          "rotates": true, 
-          "type": "hdd", 
-          "id": "/dev/sdb", 
-          "size": 4398046511104
-        }, 
+          "path": "/dev/sdb",
+          "sys_api": {
+            "vendor": "AAA",
+            "model": "aaa",
+            "size": 4398046511104,
+            "rotational": "1",
+            "human_readable_size": "4096 GB"
+          },
+          "available": true,
+          "rejected_reasons": [],
+          "device_id": "AAA-aaa-node-0-sdb"
+        },
         {
-          "available": true, 
-          "dev_id": "AAA/aaa", 
-          "rotates": true, 
-          "type": "hdd", 
-          "id": "/dev/sdc", 
-          "size": 4398046511104
-        }, 
+          "path": "/dev/sdc",
+          "sys_api": {
+            "vendor": "AAA",
+            "model": "aaa",
+            "size": 4398046511104,
+            "rotational": "1",
+            "human_readable_size": "4096 GB"
+          },
+          "available": true,
+          "rejected_reasons": [],
+          "device_id": "AAA-aaa-node-0-sdc"
+        },
         {
-          "available": true, 
-          "dev_id": "BBB/bbb", 
-          "rotates": false, 
-          "type": "ssd", 
-          "id": "/dev/sdd", 
-          "size": 549755813888
+          "path": "/dev/sdd",
+          "sys_api": {
+            "vendor": "BBB",
+            "model": "bbb",
+            "size": 549755813888,
+            "rotational": "0",
+            "human_readable_size": "512 GB"
+          },
+          "available": true,
+          "rejected_reasons": [],
+          "device_id": "BBB-bbb-node-0-sdd"
         }
       ]
-    }, 
+    },
     {
-      "name": "node-1", 
+      "name": "node-1",
       "devices": [
         {
-          "available": true, 
-          "dev_id": "CCC/ccc", 
-          "rotates": false, 
-          "type": "ssd", 
-          "id": "/dev/nvme0n1", 
-          "size": 274877906944
-        }, 
+          "path": "/dev/nvme0n1",
+          "sys_api": {
+            "vendor": "CCC",
+            "model": "ccc",
+            "size": 274877906944,
+            "rotational": "0",
+            "human_readable_size": "256 GB"
+          },
+          "available": true,
+          "rejected_reasons": [],
+          "device_id": "CCC-ccc-node-1-nvme0n1"
+        },
         {
-          "available": false, 
-          "dev_id": "AAA/aaa", 
-          "rotates": true, 
-          "type": "hdd", 
-          "id": "/dev/sda", 
-          "size": 4398046511104
-        }, 
+          "path": "/dev/sda",
+          "sys_api": {
+            "vendor": "AAA",
+            "model": "aaa",
+            "size": 4398046511104,
+            "rotational": "1",
+            "human_readable_size": "4096 GB"
+          },
+          "available": false,
+          "rejected_reasons": [],
+          "device_id": "AAA-aaa-node-1-sda"
+        },
         {
-          "available": true, 
-          "dev_id": "AAA/aaa", 
-          "rotates": true, 
-          "type": "hdd", 
-          "id": "/dev/sdb", 
-          "size": 4398046511104
-        }, 
+          "path": "/dev/sdb",
+          "sys_api": {
+            "vendor": "AAA",
+            "model": "aaa",
+            "size": 4398046511104,
+            "rotational": "1",
+            "human_readable_size": "4096 GB"
+          },
+          "available": true,
+          "rejected_reasons": [],
+          "device_id": "AAA-aaa-node-1-sdb"
+        },
         {
-          "available": true, 
-          "dev_id": "AAA/aaa", 
-          "rotates": true, 
-          "type": "hdd", 
-          "id": "/dev/sdc", 
-          "size": 4398046511104
-        }, 
+          "path": "/dev/sdc",
+          "sys_api": {
+            "vendor": "AAA",
+            "model": "aaa",
+            "size": 4398046511104,
+            "rotational": "1",
+            "human_readable_size": "4096 GB"
+          },
+          "available": true,
+          "rejected_reasons": [],
+          "device_id": "AAA-aaa-node-1-sdc"
+        },
         {
-          "available": true, 
-          "dev_id": "BBB/bbb", 
-          "rotates": false, 
-          "type": "ssd", 
-          "id": "/dev/sdd", 
-          "size": 549755813888
+          "path": "/dev/sdd",
+          "sys_api": {
+            "vendor": "BBB",
+            "model": "bbb",
+            "size": 549755813888,
+            "rotational": "0",
+            "human_readable_size": "512 GB"
+          },
+          "available": true,
+          "rejected_reasons": [],
+          "device_id": "BBB-bbb-node-1-sdd"
         }
       ]
-    }, 
+    },
     {
-      "name": "node-2", 
+      "name": "node-2",
       "devices": [
         {
-          "available": true, 
-          "dev_id": "CCC/ccc", 
-          "rotates": false, 
-          "type": "ssd", 
-          "id": "/dev/nvme0n1", 
-          "size": 274877906944
-        }, 
+          "path": "/dev/nvme0n1",
+          "sys_api": {
+            "vendor": "CCC",
+            "model": "ccc",
+            "size": 274877906944,
+            "rotational": "0",
+            "human_readable_size": "256 GB"
+          },
+          "available": true,
+          "rejected_reasons": [],
+          "device_id": "CCC-ccc-node-2-nvme0n1"
+        },
         {
-          "available": false, 
-          "dev_id": "AAA/aaa", 
-          "rotates": true, 
-          "type": "hdd", 
-          "id": "/dev/sda", 
-          "size": 4398046511104
-        }, 
+          "path": "/dev/sda",
+          "sys_api": {
+            "vendor": "AAA",
+            "model": "aaa",
+            "size": 4398046511104,
+            "rotational": "1",
+            "human_readable_size": "4096 GB"
+          },
+          "available": false,
+          "rejected_reasons": [],
+          "device_id": "AAA-aaa-node-2-sda"
+        },
         {
-          "available": true, 
-          "dev_id": "AAA/aaa", 
-          "rotates": true, 
-          "type": "hdd", 
-          "id": "/dev/sdb", 
-          "size": 4398046511104
-        }, 
+          "path": "/dev/sdb",
+          "sys_api": {
+            "vendor": "AAA",
+            "model": "aaa",
+            "size": 4398046511104,
+            "rotational": "1",
+            "human_readable_size": "4096 GB"
+          },
+          "available": true,
+          "rejected_reasons": [],
+          "device_id": "AAA-aaa-node-2-sdb"
+        },
         {
-          "available": true, 
-          "dev_id": "AAA/aaa", 
-          "rotates": true, 
-          "type": "hdd", 
-          "id": "/dev/sdc", 
-          "size": 4398046511104
-        }, 
+          "path": "/dev/sdc",
+          "sys_api": {
+            "vendor": "AAA",
+            "model": "aaa",
+            "size": 4398046511104,
+            "rotational": "1",
+            "human_readable_size": "4096 GB"
+          },
+          "available": true,
+          "rejected_reasons": [],
+          "device_id": "AAA-aaa-node-2-sdc"
+        },
         {
-          "available": true, 
-          "dev_id": "BBB/bbb", 
-          "rotates": false, 
-          "type": "ssd", 
-          "id": "/dev/sdd", 
-          "size": 549755813888
+          "path": "/dev/sdd",
+          "sys_api": {
+            "vendor": "BBB",
+            "model": "bbb",
+            "size": 549755813888,
+            "rotational": "0",
+            "human_readable_size": "512 GB"
+          },
+          "available": true,
+          "rejected_reasons": [],
+          "device_id": "BBB-bbb-node-2-sdd"
         }
       ]
     }

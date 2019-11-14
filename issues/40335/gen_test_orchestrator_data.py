@@ -31,16 +31,30 @@ def main():
         'inventory': []
     }
 
-    def _create_device(_type, _id, size, vendor, model, rotates, available):
-        return dict(type=_type, id=_id, size=size * 1024 * 1024 * 1024, dev_id='{}/{}'.format(vendor, model), rotates=rotates, available=available)
+    def _create_device(host, path, size, vendor, model, rotates, available):
+        sys_api = {
+            'vendor': vendor,
+            'model': model,
+            'size': size * 1024 * 1024 * 1024,
+            'rotational': '1' if rotates else '0',
+            'human_readable_size': '{} GB'.format(size) # TODO
+        }
+        return {
+            'path': path,
+            'sys_api': sys_api,
+            'available': available,
+            'rejected_reasons': [],
+            'device_id': '{}-{}-{}-{}'.format(vendor, model, host, path.rsplit('/')[2])
+        }
 
     for i in range(config['host']['count']):
         devices = []
         disk_count = 0
+        hostname = '{}{}'.format(config['host']['hostname_prefix'], i)
 
         disk = config['nvme']
         for j in range(disk['count']):
-            devices.append(_create_device('ssd',
+            devices.append(_create_device(hostname,
                                           '/dev/nvme0n{}'.format(j+1),
                                           disk['size'],
                                           disk['vendor'],
@@ -50,7 +64,7 @@ def main():
 
         disk = config['hdd']
         for j in range(disk['count']):
-            devices.append(_create_device('hdd',
+            devices.append(_create_device(hostname,
                                           '/dev/sd{}'.format(chr(0x61 + disk_count)),
                                           disk['size'],
                                           disk['vendor'],
@@ -61,7 +75,7 @@ def main():
 
         disk = config['ssd']
         for j in range(disk['count']):
-            devices.append(_create_device('ssd',
+            devices.append(_create_device(hostname,
                                           '/dev/sd{}'.format(chr(0x61 + disk_count)),
                                           disk['size'],
                                           disk['vendor'],
@@ -71,7 +85,7 @@ def main():
             disk_count += 1
 
         node = {
-            'name': '{}{}'.format(config['host']['hostname_prefix'], i),
+            'name': hostname,
             'devices': devices
         }
         result['inventory'].append(node)
