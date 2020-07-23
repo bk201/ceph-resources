@@ -12,8 +12,8 @@ cd $WORKSPACE
 
 extract_logs () {
     sed '/^Displaying.*/Q' consoleText > test.log
-    sed '/^make check:.*/Q' test.log > build.log
-    sed -i '0,/^make check:.*/d' test.log
+    sed '/^\[ceph-dashboard-pr-backend.*/Q' test.log > build.log
+    sed -i '0,/\[ceph-dashboard-pr-backend.*/d' test.log
 
     awk '/Displaying/,/End of/' consoleText  > daemons.log
 
